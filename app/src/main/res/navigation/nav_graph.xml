@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/productListFragment">
+
+    <fragment
+        android:id="@+id/productListFragment"
+        android:name="com.example.ecomuserbatch4.ProductListFragment"
+        android:label="fragment_product_list"
+        tools:layout="@layout/fragment_product_list" >
+        <action
+            android:id="@+id/action_productListFragment_to_productDetailsFragment"
+            app:destination="@id/productDetailsFragment" />
+        <action
+            android:id="@+id/action_productListFragment_to_cartListFragment"
+            app:destination="@id/cartListFragment" />
+        <action
+            android:id="@+id/action_productListFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_productListFragment_to_userProfileFragment"
+            app:destination="@id/userProfileFragment" />
+        <action
+            android:id="@+id/action_productListFragment_to_userOrderListFragment"
+            app:destination="@id/userOrderListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.ecomuserbatch4.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" />
+    <fragment
+        android:id="@+id/userProfileFragment"
+        android:name="com.example.ecomuserbatch4.UserProfileFragment"
+        android:label="fragment_user_profile"
+        tools:layout="@layout/fragment_user_profile" />
+    <fragment
+        android:id="@+id/userOrderListFragment"
+        android:name="com.example.ecomuserbatch4.UserOrderListFragment"
+        android:label="fragment_user_order_list"
+        tools:layout="@layout/fragment_user_order_list" />
+    <fragment
+        android:id="@+id/cartListFragment"
+        android:name="com.example.ecomuserbatch4.CartListFragment"
+        android:label="fragment_cart_list"
+        tools:layout="@layout/fragment_cart_list" >
+        <action
+            android:id="@+id/action_cartListFragment_to_checkoutFragment"
+            app:destination="@id/checkoutFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/checkoutFragment"
+        android:name="com.example.ecomuserbatch4.CheckoutFragment"
+        android:label="fragment_checkout"
+        tools:layout="@layout/fragment_checkout" >
+        <action
+            android:id="@+id/action_checkoutFragment_to_orderSuccessfulMessageFragment"
+            app:destination="@id/orderSuccessfulMessageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/orderSuccessfulMessageFragment"
+        android:name="com.example.ecomuserbatch4.OrderSuccessfulMessageFragment"
+        android:label="fragment_order_successful_message"
+        tools:layout="@layout/fragment_order_successful_message" />
+    <fragment
+        android:id="@+id/productDetailsFragment"
+        android:name="com.example.ecomuserbatch4.ProductDetailsFragment"
+        android:label="fragment_product_details"
+        tools:layout="@layout/fragment_product_details" />
+</navigation>
